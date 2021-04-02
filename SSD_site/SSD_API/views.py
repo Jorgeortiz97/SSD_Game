@@ -35,7 +35,7 @@ class SubmissionViewSet(viewsets.ModelViewSet):
     authentication_classes = [TokenAuthentication]
 
     def get_permissions(self):
-        if self.action in ["create", "retrieve", "list"]:
+        if self.action in ["retrieve", "list"]:
             return [AllowAny()]
         elif self.action in ["update", "partial_update"]:
             return [IsAdminUser()]
@@ -48,7 +48,7 @@ class TournamentViewSet(viewsets.ModelViewSet):
     authentication_classes = [TokenAuthentication]
 
     def get_permissions(self):
-        if self.action in ["create", "retrieve", "list"]:
+        if self.action in ["retrieve", "list"]:
             return [AllowAny()]
         elif self.action in ["update", "partial_update"]:
             return [IsAdminUser()]

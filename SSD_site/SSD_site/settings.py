@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'rest_framework',
+    'rest_framework.authtoken',
     'SSD_API.apps.SsdApiConfig',
     'django.contrib.admin',
     'django.contrib.auth',
